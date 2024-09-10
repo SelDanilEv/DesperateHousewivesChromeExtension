@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Defender Player",
+  "description": "Using player without adds.",
+  "version": "1.0",
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "images/icon.png"
+  },
+  "permissions": ["scripting", "activeTab", "storage"]
+}
