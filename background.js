@@ -1,4 +1,4 @@
-const website = "https://defender-portal.onrender.com";
+const website = "https://defender-portal.duckdns.org";
 
 const isOnKey = "isOn";
 
