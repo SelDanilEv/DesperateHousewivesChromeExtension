@@ -48,7 +48,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   Guard(tab);
 
   if (changeInfo.status === "loading") {
-    HangleState(tab);
+    HandleState(tab);
   }
 });
 
@@ -60,10 +60,10 @@ chrome.action.onClicked.addListener(async (tab) => {
 
   await storeSessionData(isOnKey, newStateIsOn);
 
-  await HangleState(tab);
+  await HandleState(tab);
 });
 
-async function HangleState(tab) {
+async function HandleState(tab) {
   const state = await getSessionData(isOnKey);
 
   await chrome.action.setBadgeText({
